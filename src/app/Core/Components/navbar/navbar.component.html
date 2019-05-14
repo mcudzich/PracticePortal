@@ -1,0 +1,35 @@
+<nav class="navbar navbar-default" [ngClass]="{fullSize: collapsedSidebar}">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a (click) = "toggleSidebarCollapse()" class="navbar-brand" href="#">
+          <span class="fa fa-bars"></span>
+      </a>
+    </div>
+
+    <form class="nav navbar-form navbar-left">
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1">
+            <i class="glyphicon glyphicon-search"></i>
+        </span>
+        <input
+            (keyup) = "onKeyUp($event)"
+            type="text"
+            class="form-control"
+            placeholder="Start searching..."
+            aria-label="Username"
+            aria-describedby="basic-addon1">
+      </div>
+    </form>
+
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">
+            <div class="circle-mask">
+                <img src="../assets/profile.jpg" alt="Profile">
+            </div>
+        </a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-cog"></i></a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-bullhorn"></i></a></li>
+    </ul>
+
+  </div><!-- /.container-fluid -->
+</nav>
