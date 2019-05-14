@@ -1,22 +1,5 @@
 @import "../../../../styles.scss";
 
-@keyframes collapse {
-    0% {
-        width: 15%;
-        max-width: none;
-        min-width: 175px;
-        height: 100vh;
-        text-align: center;
-    }
-
-    100% {
-        width: 50px;
-        min-width: 50px;
-        height: 94vh;
-        text-align: center;
-    }
-}
-
 #sidebar {
     position: fixed;
 	width: 15%;
@@ -29,11 +12,9 @@
     bottom: 0;
 
     &.collapsed {
-        animation-name: collapse;
-        animation-duration: 1s;
-        animation-iteration-count: 1s;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
+        max-width: 50px;
+        min-width: 50px;
+        height: 94vh;
         text-align: center;
         .sidebar-header {
             display: none;
@@ -52,10 +33,6 @@
                 }
             }
         }
-    }
-
-    &.expanded {
-
     }
 
 	.sidebar-header {
